@@ -9,12 +9,14 @@ class Employee:
         self.first = first
         self.last = last
         self.pay = pay
-        self.email = first + '.' + last + '@company.com'
 
         Employee.num_of_emps +=1
 
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
+
+    def email(self):
+        return '{}.{}@company.com'.format(self.first, self.last).lower()
     
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_amount)
@@ -42,22 +44,24 @@ class Manager(Employee): #Manager class with employees under supervision
         if emp in self.employees:
             self.employees.remove(emp)
 
-    def print_emp(self):
+    def print_emp(self): # Prints All employee managed by Manager
         for emp in self.employees:
             print('-->', emp.fullname())
 
     
 dev_1 = Developer('Aerish', 'Aryal', 750000, 'Python')
 dev_2 = Developer('Test', 'User', 500000, 'TypeScript')
+emp_1 = Employee('Ladu', 'Lalit', 350000)
+mgr_1 = Manager('Robert', 'Kyosaki', '1000000', [dev_2])
 
-mgr_1 = Manager('Robert', 'Kyosaki', '1000000', [dev_1])
+mgr_1.add_emp(emp_1)
+mgr_1.add_emp(dev_1)
+               
 
-            #    print(mgr_1.email)
-               
-               
-            #    mgr_1.add_emp(dev_2)
-            #    mgr_1.rmv_emp(dev_1)
-            #    mgr_1.print_emp()
+
+mgr_1.rmv_emp(dev_2)
+
+mgr_1.print_emp()
 
 #print(isinstance(mgr_1, Developer)) #Tells if a instance is inherited from given class or not. 
 # print(issubclass(Developer, Manager))
