@@ -27,7 +27,7 @@ for match in matches:
   print(match.span()) 
   print(text[match.span()[0]: match.span()[1]])
 
-def fixBugs():
+def fixBugs(): #Just dummy func to learn branch in git and github. 
   print("Initializing Fix Bugs")
   time.sleep(5)
   print("Fixing Bugs Succcessful !")
