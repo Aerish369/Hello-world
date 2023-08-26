@@ -28,5 +28,3 @@ for match in matches:
 
 
 
-def newFeature():
-  print("This is new feature to tell time. ")
