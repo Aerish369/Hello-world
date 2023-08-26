@@ -1,4 +1,5 @@
 import re
+import time
 
 #? Regular Expressions are used to find words from text. It can have wide variety of uses. However, I only learned to find text and similar texts. 
 #? According to need, I can always expand my knowledge on Regular Expressions and re module. 
@@ -27,5 +28,11 @@ for match in matches:
   print(text[match.span()[0]: match.span()[1]])
 
 
+
 def newFeature():
   print("This is new feature. ")
+
+def fixBugs(): #Just dummy func to learn branch in git and github. 
+  print("Initializing Fix Bugs")
+  time.sleep(5)
+  print("Fixing Bugs Succcessful !")
