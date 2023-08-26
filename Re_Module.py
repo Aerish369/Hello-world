@@ -27,4 +27,5 @@ for match in matches:
   print(text[match.span()[0]: match.span()[1]])
 
 
-
+def newFeature():
+  print("This is new feature. ")
