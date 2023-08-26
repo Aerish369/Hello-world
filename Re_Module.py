@@ -25,3 +25,8 @@ matches = re.finditer(pattern, text)
 for match in matches:
   print(match.span()) 
   print(text[match.span()[0]: match.span()[1]])
+
+
+
+def newFeature():
+  print("This is new feature to tell time. ")
