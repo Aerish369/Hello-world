@@ -1,4 +1,5 @@
 import re
+import time
 
 #? Regular Expressions are used to find words from text. It can have wide variety of uses. However, I only learned to find text and similar texts. 
 #? According to need, I can always expand my knowledge on Regular Expressions and re module. 
@@ -25,3 +26,8 @@ matches = re.finditer(pattern, text)
 for match in matches:
   print(match.span()) 
   print(text[match.span()[0]: match.span()[1]])
+
+def fixBugs():
+  print("Initializing Fix Bugs")
+  time.sleep(5)
+  print("Fixing Bugs Succcessful !")
